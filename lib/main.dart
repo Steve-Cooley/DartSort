@@ -1,7 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:sorting_algorithms/utils.dart';
+import 'package:sorting_algorithms/sorters/bogo.dart';
+import 'package:sorting_algorithms/sorters/bubble_sort.dart';
 
 void main() {
-  runApp(const MyApp());
+  //runApp(const MyApp());
+  print("Hello World!");
+
+  print("Sorted list, should return true: ${isSorted([1, 2, 3])}");
+
+  testBogoSort();
+
+  testBubblesort();
+
+  // Just so I know the program isn't frozen
+  print("Program is exiting");
+}
+
+void testBubblesort() {
+  print("Testing bubblesort");
+  final results = bubbleSort([8, 7, 5, 37]);
+  print("Bubblesort worked? ${isSorted(results)}");
+}
+
+void testBogoSort() {
+  print("Now testing bogoSort");
+  List<int> unsorted0 = [24, 19, 7, 67, 3];
+  print("Unsorted list: $unsorted0");
+  print("Sorted list: ${bogoSort(unsorted0)}");
 }
 
 class MyApp extends StatelessWidget {
