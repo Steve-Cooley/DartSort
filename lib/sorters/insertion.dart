@@ -1,5 +1,5 @@
 List<int> insertionSort(List<int> inp) {
-  var outp = List<int>.from(inp);
+  final outp = List<int>.from(inp);
   for (int i = 1; i < inp.length; ++i) {
     int tmp = outp[i];
     int j = i - 1;
