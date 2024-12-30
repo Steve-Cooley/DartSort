@@ -3,6 +3,7 @@ import 'package:sorting_algorithms/utils.dart';
 import 'package:sorting_algorithms/sorters/bogo.dart';
 import 'package:sorting_algorithms/sorters/bubble_sort.dart';
 import 'package:sorting_algorithms/sorters/insertion.dart';
+import 'package:collection/collection.dart' as coll; // for listEquality
 
 void main() {
   //runApp(const MyApp());
@@ -15,6 +16,12 @@ void main() {
   testBubblesort();
 
   testInsertionSort();
+
+  print("Printing ordered list:");
+  print("  ${generateOrderedList(10)}");
+
+  print("Printing repeated sequence (for radix et al):");
+  print("  ${generateRepeatedSequence()}");
 
   // Just so I know the program isn't frozen
   print("Program is exiting");
