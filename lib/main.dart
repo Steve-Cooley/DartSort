@@ -25,12 +25,6 @@ void main() {
   print("Program is exiting");
 }
 
-void testBubblesort() {
-  print("Now testing bubblesort.");
-  final results = bubbleSort([8, 7, 5, 37]);
-  print("Bubblesort worked? ${isSorted(results)}");
-}
-
 void testBogoSort() {
   print("Now testing bogoSort.");
   List<int> unsorted0 = [24, 19, 7, 67, 3];
