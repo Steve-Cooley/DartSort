@@ -18,6 +18,7 @@ void main() {
       print("Unsorted list: $scrambledList0");
     });
     test('Test bubbleSortMutating', () {
+      print("Testing in-place, or mutating bubblesort.");
       expect(scrambledList0, isNot(sortedList0),
           reason:
               "To using sorted lists as inputs, and avoid false successes.");

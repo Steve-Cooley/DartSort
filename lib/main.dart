@@ -13,8 +13,6 @@ void main() {
 
   testBogoSort();
 
-  testBubblesort();
-
   testInsertionSort();
 
   print("Printing ordered list:");
