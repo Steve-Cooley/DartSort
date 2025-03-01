@@ -3,6 +3,7 @@ import 'package:sorting_algorithms/utils.dart';
 import 'package:sorting_algorithms/sorters/bogo.dart';
 import 'package:sorting_algorithms/sorters/bubble_sort.dart';
 import 'package:sorting_algorithms/sorters/insertion.dart';
+import 'package:sorting_algorithms/sorters/shellSort.dart';
 import 'package:collection/collection.dart' as coll; // for listEquality
 import 'dart:math';
 
