@@ -37,7 +37,7 @@ void main() {
       // verify that the scrambled list isn't in-order
       expect(scrambledList0, isNot(sortedList0),
           reason: "Avoid false successes.");
-      shellSort(testList0);
+      shellSortMutating(testList0);
       expect(testList0, equals(sortedList0));
     });
     print("Ending shellsort testing!\n");

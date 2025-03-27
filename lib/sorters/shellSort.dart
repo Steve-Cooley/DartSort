@@ -21,7 +21,7 @@ List<int> mkGapSequence(int arrSize) {
   return gaps;
 }
 
-List<int> shellSort(List<int> inp) {
+List<int> shellSortMutating(List<int> inp) {
   int len = inp.length;
   final gaps = mkGapSequence(len);
 
