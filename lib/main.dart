@@ -4,10 +4,15 @@ import 'package:sorting_algorithms/sorters/bogo.dart';
 import 'package:sorting_algorithms/sorters/bubble_sort.dart';
 import 'package:sorting_algorithms/sorters/insertion.dart';
 import 'package:collection/collection.dart' as coll; // for listEquality
+import 'package:logging/logging.dart';
 
 void main() {
   //runApp(const MyApp());
-  print("Hello World!");
+  setupLogging();
+  final log = Logger('MainFileLogger');
+
+  log.info("Program is starting.");
+  print("Hello World!"); // This should replace print in production code.
 
   print("Sorted list, should return true: ${isSorted([1, 2, 3])}");
 
@@ -39,6 +44,14 @@ void testInsertionSort() {
   final results = insertionSort(unsorted0);
   print("Sorted list: $results");
   print("Did it work? ${isSorted(results)}");
+}
+
+void setupLogging() {
+  Logger.root.level = Level.ALL; // show all logs
+  Logger.root.onRecord.listen((record) {
+    print(
+        '${record.level.name}: ${record.time}: ${record.loggerName}: ${record.message}');
+  });
 }
 
 /*************
