@@ -12,7 +12,6 @@ void main() {
   final log = Logger('MainFileLogger');
 
   log.info("Program is starting.");
-  print("Hello World!"); // This should replace print in production code.
 
   print("Sorted list, should return true: ${isSorted([1, 2, 3])}");
 
@@ -27,7 +26,7 @@ void main() {
   print("  ${generateRepeatedSequence()}");
 
   // Just so I know the program isn't frozen
-  print("Program is exiting");
+  log.info("Program is exiting. -Me");
 }
 
 void testBogoSort() {
