@@ -37,7 +37,7 @@ void testInsertionsSortFunctional(List<int> unsorted, List<int> sorted) {
   });
 }
 
-void testBogoSort() {}
+void testBogoSort() {} // TODO
 
 void testShellSort(List<int> unsorted, List<int> sorted) {
   group('Testing Shellsort and variations.', () {

@@ -22,3 +22,37 @@ List<int> generateRepeatedSequence({int max = 10, int repeats = 2}) {
   return List<int>.generate(max * repeats, (index) => (index % max) + 1,
       growable: false);
 }
+
+List<int> merge(List<int> left, List<int> right) {
+  /// Merge two sorted lists.
+  int llen = left.length;
+  int rlen = right.length;
+  int ileft = 0, iright = 0, imerged = 0;
+  List<int> merged = List.filled(left.length + right.length, 0);
+
+  while (ileft < llen && iright < rlen) {
+    if (left[ileft] <= right[iright]) {
+      merged[imerged] = left[ileft];
+      ++ileft;
+      ++imerged;
+    } else {
+      merged[imerged] = right[iright];
+      ++iright;
+      ++imerged;
+    }
+  }
+
+  while (ileft < llen) {
+    merged[imerged] = left[ileft];
+    ++ileft;
+    ++imerged;
+  }
+
+  while (iright < rlen) {
+    merged[imerged] = right[iright];
+    ++iright;
+    ++imerged;
+  }
+
+  return merged;
+}
